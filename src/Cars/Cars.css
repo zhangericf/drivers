@@ -1,0 +1,10 @@
+.Cars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.Sliders {
+  display: flex;
+  justify-content: space-between;
+}

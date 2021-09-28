@@ -1,6 +1,5 @@
 import './Car.css';
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 class Car extends React.Component {
 
@@ -39,17 +38,17 @@ class Car extends React.Component {
     let discount = this.getDaysDiscount(prices.duration, totalDays);
 
     return (
-      <div className="Car">
-        <div><img src={this.props.baseURL + car.picturePath} alt="voiture"></img></div>
-        <div className="d-flex carInfo">
-          <div className="w-50">
+      <div className="Car m-3">
+        <div><img src={this.props.baseURL + car.picturePath} className="w-100" alt="voiture"></img></div>
+        <div className="d-xl-flex d-lg-flex d-md-flex carInfo">
+          <div className="w-responsive">
             <div> Marque : {car.brand} </div>
             <div> Model : {car.model} </div>
             <div> Coût par jour : {car.pricePerDay}€ </div>
             <div> Coût par km : {car.pricePerKm}€ </div>
           </div>
           <div className="hr"></div>
-          <div className="w-50 text-right">
+          <div className="w-responsive text-right">
             <div> {car.pricePerDay} x {prices.duration} j = {totalDays}€ </div>
             <div> {car.pricePerKm} x {prices.distance} km = {totalKms}€ </div>
             <div> Réduction -{discount.percent} (-{discount.discount}€)</div>

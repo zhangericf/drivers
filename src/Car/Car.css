@@ -1,5 +1,4 @@
 .Car {
-    margin: 20px;
     animation: fadeIn 1s;
 }
 
@@ -24,8 +23,6 @@
     unicode-bidi: isolate;
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
     overflow: hidden;
     border-style: inset;
     border-width: 1px;

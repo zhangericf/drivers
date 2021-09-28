@@ -1,9 +1,10 @@
 import './App.css';
 import { Cars } from './Cars/Cars';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container">
       <Cars></Cars>
     </div>
   );

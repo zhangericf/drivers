@@ -53,9 +53,9 @@ class Slider extends React.Component {
     }
 
     return (
-      <div className="Slider">
+      <div className="w-responsive mt-4 mb-0">
         <label>{slider.name}</label>
-        <input type="range" min={slider.min} max={slider.max} step={slider.step} value={slider.value} list={"steplist" + slider.name} onChange={this.sliderOnChange}/>
+        <input className="w-100" type="range" min={slider.min} max={slider.max} step={slider.step} value={slider.value} list={"steplist" + slider.name} onChange={this.sliderOnChange}/>
         <output id="output">{slider.value} {slider.unit}</output>
         <datalist id={"steplist" + slider.name}>
             {options}

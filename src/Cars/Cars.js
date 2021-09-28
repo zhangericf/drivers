@@ -60,6 +60,14 @@ class Cars extends React.Component {
       this.updateSearchValue(data)
     }
 
+    const changeDisplay = (e) => {
+      if(e.target.checked) {
+        document.getElementById("Cars").classList.add("d-flex");
+      } else {
+        document.getElementById("Cars").classList.remove("d-flex");
+      }
+    }
+
     if (cars !== null) {
       var carlist = 
         cars.map(function(car){
@@ -67,11 +75,19 @@ class Cars extends React.Component {
         })
       return (
         <div>
-          <div className="Sliders">
+          <div className="d-flex justify-content-between flex-xl-row flex-lg-row flex-md-row flex-sm-column flex-column">
+            {/* <img alt="layout" src={process.env.PUBLIC_URL + "4layout.png"} /> */}
+            
             <Slider onChange={onChangeHandler} name="Durée" min="1" max="30" unit="Jour" step="1"></Slider>
             <Slider onChange={onChangeHandler} name="Distance" min="50" max="3000" unit="KM" step="50"></Slider>
           </div>
-          <div className="Cars">
+          <div className='text-center'>
+            <label className="switch">
+              <input type="checkbox" onChange={changeDisplay} defaultChecked/>
+              <span className="slider"></span>
+            </label>
+          </div>
+          <div id="Cars" className="d-flex flex-wrap justify-content-around">
             {carlist}
           </div>
         </div>

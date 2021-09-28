@@ -1,8 +1,40 @@
-.Slider {
-    width: 40%;
-    margin: 30px 0;
+.w-responsive {
+  width: 100%!important;
 }
 
-.Slider input {
-    width: 100%;
+@media (min-width: 576px) {
+    .w-responsive {
+        width: 100%!important;
+    }
 }
+
+@media (min-width: 768px) {
+    .w-responsive {
+        width: 100%!important;
+    }
+
+    .flex-xl-row .w-responsive, .flex-lg-row .w-responsive, .flex-md-row .w-responsive {
+        margin: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .w-responsive {
+        width: 100%!important;
+    }
+
+    .flex-xl-row .w-responsive, .flex-lg-row .w-responsive, .flex-md-row .w-responsive {
+        margin: 3rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .w-responsive {
+        width: 100%!important;
+    }
+
+    .flex-xl-row .w-responsive, .flex-lg-row .w-responsive, .flex-md-row .w-responsive {
+        margin: 3rem;
+    }
+}
+
